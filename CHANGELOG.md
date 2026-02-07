@@ -1,3 +1,16 @@
+# [3.0.0](https://github.com/glorynguyen/glm-ocr-mcp/compare/v2.0.0...v3.0.0) (2026-02-07)
+
+
+### chore
+
+* rename package to glm-ocr-mcp ([f1d68b1](https://github.com/glorynguyen/glm-ocr-mcp/commit/f1d68b193cba0ca245ea272e6781529abbbeef4c))
+
+
+### BREAKING CHANGES
+
+* package name changed from
+@vinhnguyen/confluence-mcp to @vinhnguyen/glm-ocr-mcp
+
 # [2.0.0](https://github.com/glorynguyen/glm-ocr-mcp/compare/v1.0.0...v2.0.0) (2026-02-07)
 
 
