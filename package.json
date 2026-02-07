@@ -1,0 +1,73 @@
+{
+  "name": "glm-ocr-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for GLM-OCR - local OCR capabilities via Ollama",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "glm-ocr-mcp": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/glorynguyen/glm-ocr-mcp.git"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "semantic-release": "semantic-release"
+  },
+  "keywords": [
+    "mcp",
+    "ocr",
+    "glm-ocr",
+    "ollama",
+    "model-context-protocol",
+    "ai",
+    "vision"
+  ],
+  "author": "Vinh Nguyen",
+  "license": "MIT",
+  "homepage": "https://github.com/glorynguyen/glm-ocr-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/glorynguyen/glm-ocr-mcp/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "index.js",
+    "README.md"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.26.0",
+    "ollama": "^0.6.3"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^12.0.3",
+    "semantic-release": "^25.0.3"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "package.json",
+            "package-lock.json",
+            "CHANGELOG.md"
+          ],
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ],
+      "@semantic-release/github"
+    ]
+  }
+}
